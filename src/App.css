@@ -1,0 +1,197 @@
+.app {
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f8ff;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.app-header {
+  background-color: #66b3ff;
+  color: white;
+  padding: 20px;
+  border-radius: 15px;
+  text-align: left;
+  width: 80%;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.profile-icon,
+.notification-icon {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.profile-icon:hover,
+.notification-icon:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.notification-icon {
+  position: relative;
+}
+
+.notification-icon::after {
+  content: '3';
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  padding: 3px 6px;
+  font-size: 0.7em;
+}
+
+.search-bar {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.search-bar:hover {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.search-bar span {
+  margin-right: 10px;
+  color: #fff;
+}
+
+.search-bar input[type="text"] {
+  border: none;
+  background: none;
+  outline: none;
+  color: white;
+  width: 100%;
+}
+
+.search-bar input[type="text"]::placeholder {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.category-filters {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.category-filters button {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  margin: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.category-filters button:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+  color: #fff;
+}
+
+.category-filters button.active {
+  background-color: #ffa500;
+  color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.training-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 80%;
+  justify-content: flex-start;
+}
+
+.training-card {
+  background-color: white;
+  border-radius: 15px;
+  padding: 15px;
+  width: calc(50% - 10px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.training-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.training-card h3 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.card-image {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+.card-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.training-card:hover .card-image img {
+  transform: scale(1.1);
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-around;
+  color: #777;
+}
+
+.card-footer span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+@media (max-width: 768px) {
+  .app-header {
+    width: 95%;
+    padding: 15px;
+  }
+
+  .training-cards {
+    width: 95%;
+  }
+
+  .training-card {
+    width: 100%;
+  }
+
+  .category-filters {
+    justify-content: flex-start;
+  }
+}
