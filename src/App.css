@@ -76,7 +76,7 @@
   color: #fff;
 }
 
-.search-bar input[type="text"] {
+.search-bar input[type='text'] {
   border: none;
   background: none;
   outline: none;
@@ -84,7 +84,7 @@
   width: 100%;
 }
 
-.search-bar input[type="text"]::placeholder {
+.search-bar input[type='text']::placeholder {
   color: rgba(255, 255, 255, 0.8);
 }
 
@@ -104,7 +104,9 @@
   cursor: pointer;
   margin: 5px;
   font-size: 0.8em; /* Reduced font size */
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
 }
 
 .category-filters button:hover {
@@ -133,7 +135,9 @@
   width: calc(33.33% - 10px); /* Three cards per row */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .equipment-card:hover {
@@ -295,7 +299,7 @@
   margin-bottom: 20px;
 }
 
-.add-vehicle input[type="text"] {
+.add-vehicle input[type='text'] {
   padding: 8px;
   border-radius: 5px;
   border: 1px solid #ddd;
